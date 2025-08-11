@@ -53,9 +53,9 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
     {
       title: "Principais",
       items: [
-        { icon: <Book className="w-5 h-5" />, label: "Tutoriais", onClick: () => onNavigate('tutorials') },
-        { icon: <Network className="w-5 h-5" />, label: "Servidores", onClick: () => setShowServersModal(true) },
-        { icon: <DollarSign className="w-5 h-5" />, label: "Comprar Login", onClick: () => onNavigate('buy'), highlight: true },
+       // { icon: <Book className="w-5 h-5" />, label: "Tutoriais", onClick: () => onNavigate('tutorials') },
+        // { icon: <Network className="w-5 h-5" />, label: "Servidores", onClick: () => setShowServersModal(true) },
+        // { icon: <DollarSign className="w-5 h-5" />, label: "Comprar Login", onClick: () => onNavigate('buy'), highlight: true },
         { icon: <CalendarClock className="w-5 h-5" />, label: "Check User", onClick: () => onNavigate('checkuser') }
       ]
     },
