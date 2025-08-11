@@ -11,7 +11,7 @@
   }
 
   body {
-    background: linear-gradient(135deg, #2A0A3E 0%, #ff0 50%, #2A0A3E 100%);
+    background: linear-gradient(135deg, #373b47 0%, 4B0082 50%, #f3f4f6 100%);
     min-height: 100vh;
     color: #f3f4f6;
   }
@@ -71,7 +71,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #2A0A3E;
+    background: #1E90FF;
   }
 
   ::-webkit-scrollbar-thumb {
