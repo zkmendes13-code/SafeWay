@@ -33,13 +33,13 @@ export function Terms({ onClose, onAccept }: TermsProps) {
         <div className="p-4 rounded-lg bg-[#26074d]/30 border border-[#6205D5]/20 backdrop-blur-sm">
           <div className="prose prose-invert max-w-none">
             <p className="text-[#b0a8ff]/80 mb-4">
-              Bem-vindo ao T Project. Ao utilizar nossos serviços, você concorda com os seguintes Termos de Uso. Leia atentamente antes de utilizar o aplicativo.
+              Bem-vindo ao SafeWay VPN. Ao utilizar nossos serviços, você concorda com os seguintes Termos de Uso. Leia atentamente antes de utilizar o aplicativo.
             </p>
 
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">1. Definição do Serviço</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                O T Project oferece um serviço de conexão à internet através de um sistema de proxy, permitindo que os usuários acessem a rede mesmo sem crédito com a operadora. Esse processo é possível ao utilizar URLs permitidas pelas operadoras para redirecionar o tráfego.
+                O SafeWay VPN oferece um serviço de conexão à internet através de um sistema de proxy, permitindo que os usuários acessem a rede mesmo sem crédito com a operadora. Esse processo é possível ao utilizar URLs permitidas pelas operadoras para redirecionar o tráfego.
               </p>
               <p className="text-[#b0a8ff]/80 mb-4">Nosso serviço foca em:</p>
               <ul className="list-disc list-inside text-[#b0a8ff]/80 space-y-2">
@@ -50,7 +50,7 @@ export function Terms({ onClose, onAccept }: TermsProps) {
 
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">2. Uso do Serviço</h2>
-              <p className="text-[#b0a8ff]/80 mb-4">O usuário deve utilizar o T Project de forma responsável e de acordo com as leis locais. Estão proibidos:</p>
+              <p className="text-[#b0a8ff]/80 mb-4">O usuário deve utilizar o SafeWay VPN de forma responsável e de acordo com as leis locais. Estão proibidos:</p>
               <ul className="list-disc list-inside text-[#b0a8ff]/80 space-y-2">
                 <li>O uso do serviço para atividades ilegais</li>
                 <li>Qualquer tentativa de modificar, invadir ou explorar falhas do aplicativo</li>
@@ -61,7 +61,7 @@ export function Terms({ onClose, onAccept }: TermsProps) {
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">3. Responsabilidade do Usuário</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                O usuário é o único responsável pelo uso que faz do T Project. Não nos responsabilizamos por qualquer uso indevido do serviço, incluindo eventuais violações de políticas das operadoras ou de legislações locais.
+                O usuário é o único responsável pelo uso que faz do SafeWay VPN. Não nos responsabilizamos por qualquer uso indevido do serviço, incluindo eventuais violações de políticas das operadoras ou de legislações locais.
               </p>
             </section>
 
@@ -103,7 +103,7 @@ export function Terms({ onClose, onAccept }: TermsProps) {
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">9. Contato</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                Para dúvidas ou suporte, entre em contato pelo e-mail <a href="mailto:talkera@sshtproject.com" className="underline">talkera@sshtproject.com</a>
+                Para dúvidas ou suporte, entre em contato pelo e-mail <a href="mailto:safewayplus@gmail.com" className="underline">talkera@sshtproject.com</a>
               </p>
             </section>
 
