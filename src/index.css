@@ -1,0 +1,582 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: linear-gradient(135deg, #2A0A3E 0%, #4B0082 50%, #2A0A3E 100%);
+    min-height: 100vh;
+    color: #f3f4f6;
+  }
+
+  input {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Bloquear seleção de texto para WebView Android */
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Permitir seleção apenas em inputs e textareas */
+  input, textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+    -webkit-touch-callout: default !important;
+  }
+
+  /* Prevenir context menu em WebView */
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Garantir que inputs mantenham funcionalidade */
+  input:focus, textarea:focus {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+
+  /* Desabilitar drag and drop */
+  * {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2A0A3E;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4B0082;
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    padding: 1.5rem 1.5rem;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #5A0CA3, #4B0082);
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-outline {
+    padding: 1.5rem 1.5rem;
+    border: 2px solid #4B0082;
+    color: #E0E0E0;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    transition: transform 0.1s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .btn-outline:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-outline:hover {
+    color: white;
+  }
+
+  .card {
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(42, 10, 62, 0.5));
+    backdrop-filter: blur(4px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(58, 10, 122, 0.3);
+  }
+
+  .nav-link {
+    color: #E0E0E0;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4B0082;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .glass-effect {
+    background: rgba(88, 28, 135, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+  }
+
+  /* Classes utilitárias para controle de seleção */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .allow-select {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  .no-drag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    /* user-drag: none; */
+  }
+
+  .mobile-menu-enter {
+    transform: translateX(0);
+    transition: transform 300ms ease-out;
+  }
+
+  .mobile-menu-exit {
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #c084fc, #e879f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+/* Ajustes de tipografia para visual de app */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+button {
+  letter-spacing: -0.01em;
+}
+
+input {
+  letter-spacing: -0.01em;
+}
+
+/* Ajustes de interação touch */
+@media (hover: none) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  .hover\:scale-\[1\.02\]:hover {
+    transform: none;
+  }
+}
+
+/* Ajustes de feedback visual */
+.active\:scale-95:active {
+  transform: scale(0.98);
+}
+
+.tap-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Range Input Styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6205D5, #7c4dff);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(98, 5, 213, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(98, 5, 213, 0.5);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6205D5, #7c4dff);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(98, 5, 213, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(98, 5, 213, 0.5);
+}
+
+/* Dropdown animations */
+.dropdown-enter {
+  animation: dropdownEnter 0.2s ease-out;
+}
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glass effect enhanced */
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animações para notificações toast */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification-enter {
+  animation: slideInFromRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-exit {
+  animation: slideOutToRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsividade para notificações em mobile */
+@media (max-width: 640px) {
+  .notification-container {
+    top: 1rem !important;
+    right: 1rem !important;
+    left: 1rem !important;
+    max-width: none !important;
+  }
+}
+
+/* Suporte para Tablet - Portrait e Landscape */
+/* Tablet Portrait: melhorias de UX para telas médias */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    padding: 2rem 1.75rem;
+    border-radius: 1.25rem;
+  }
+  
+  .btn-primary, .btn-outline {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.75rem;
+  }
+  
+  input {
+    font-size: 1.05rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+  }
+  
+  h1, h2, h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+  
+  /* Touch targets maiores */
+  button, input, [role="button"] {
+    min-height: 48px;
+  }
+}
+
+/* Tablet Landscape: layout otimizado para orientação paisagem */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  .btn-primary, .btn-outline {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  input {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+  
+  h1, h2, h3 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Orientação landscape específica: aproveita melhor o espaço horizontal */
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1280px) {
+  #container-home {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 1rem 1.25rem;
+  }
+  
+  /* Logo menor em landscape para economizar espaço vertical */
+  #app-logo {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  
+  /* NetworkStats mais compacto em landscape */
+  .network-stats-landscape {
+    max-width: 240px;
+    padding: 0.75rem;
+  }
+}
+
+/* Tablets pequenos: otimizações específicas para 768px-900px */
+@media (min-width: 768px) and (max-width: 900px) {
+  #container-home {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  /* Logo menor em tablets pequenos */
+  #app-logo {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+  
+  /* Inputs e botões um pouco menores */
+  input, button {
+    height: 2.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Touch targets maiores em dispositivos touch */
+@media (pointer: coarse) {
+  button, input, [role="button"], [role="tab"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Aumenta área de toque dos ícones */
+  .icon-button {
+    padding: 0.75rem;
+  }
+}
+
+/* Otimizações para tablets em modo retrato */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #container-home {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Hover states desabilitados em touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  button:hover, .card:hover {
+    background-color: inherit;
+    transform: none;
+  }
+}
+
+/* Melhorias para modais e componentes modernos */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6205D5 #1a0533;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1a0533;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6205D5, #7c4dff);
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7c4dff, #9575ff);
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: #1a0533;
+}
+
+/* Animações suaves para modais */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Efeitos de shimmer para elementos loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Força permitir seleção em inputs - regra específica para WebView */
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="search"], 
+input[type="number"], 
+textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
+
+/* Permitir seleção em inputs quando focados */
+input:focus, 
+textarea:focus {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
