@@ -33,13 +33,13 @@ export function Privacy({ onClose, onAccept }: PrivacyProps) {
         <div className="p-4 rounded-lg bg-[#26074d]/30 border border-[#6205D5]/20 backdrop-blur-sm">
           <div className="prose prose-invert max-w-none">
             <p className="text-[#b0a8ff]/80 mb-4">
-              A sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações ao utilizar o aplicativo T Project.
+              A sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações ao utilizar o aplicativo SafeWay VPN.
             </p>
 
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">1. Informações Coletadas</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                O T Project coleta apenas o Device ID do seu dispositivo. Esse identificador é armazenado junto ao seu usuário em nossa base de dados para a finalidade exclusiva de limitar o número de conexões simultâneas.
+                O SafeWay VPN coleta apenas o Device ID do seu dispositivo. Esse identificador é armazenado junto ao seu usuário em nossa base de dados para a finalidade exclusiva de limitar o número de conexões simultâneas.
               </p>
             </section>
 
@@ -66,7 +66,7 @@ export function Privacy({ onClose, onAccept }: PrivacyProps) {
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">4. Compartilhamento de Dados</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                O T Project não compartilha suas informações com terceiros, parceiros ou serviços externos.
+                O SafeWay VPN não compartilha suas informações com terceiros, parceiros ou serviços externos.
               </p>
             </section>
 
@@ -80,14 +80,14 @@ export function Privacy({ onClose, onAccept }: PrivacyProps) {
                 <li>Solicitar a exclusão dos seus dados</li>
               </ul>
               <p className="text-[#b0a8ff]/80">
-              Para entrar em contato, envie um e-mail para <a href="mailto:talkera@sshtproject.com" className="underline">talkera@sshtproject.com</a>
+              Para entrar em contato, envie um e-mail para <a href="mailto:safewayplus@gmail.com" className="underline"></a>
                 </p>
             </section>
 
             <section className="mb-6">
               <h2 className="text-lg font-medium text-[#b0a8ff] mb-4">6. Base Legal e Responsabilidade</h2>
               <p className="text-[#b0a8ff]/80 mb-4">
-                O T Project não pertence a uma empresa registrada legalmente. O tratamento de dados é feito de forma automatizada, sem intervenção humana.
+                O SafeWay VPN não pertence a uma empresa registrada legalmente. O tratamento de dados é feito de forma automatizada, sem intervenção humana.
               </p>
             </section>
 
@@ -97,13 +97,13 @@ export function Privacy({ onClose, onAccept }: PrivacyProps) {
                 Podemos atualizar esta política de tempos em tempos. Quaisquer alterações serão publicadas nesta página, e o uso continuado do serviço implica na aceitação da política revisada.
               </p>
                 <p className="text-[#b0a8ff]/80">
-                Caso tenha dúvidas, entre em contato pelo e-mail <a href="mailto:talkera@sshtproject.com" className="underline">talkera@sshtproject.com</a>
+                Caso tenha dúvidas, entre em contato pelo e-mail <a href="mailto:safewayplus@gmail.com" className="underline"></a>
                 </p>
             </section>
 
             <footer className="mt-8 pt-4 border-t border-[#6205D5]/20">
               <p className="text-sm text-[#b0a8ff]/60 text-center">
-                Última atualização: 23/03/2025 - SSH T PROJECT
+                Última atualização: 23/03/2025 - SafeWay VPN
               </p>
             </footer>
           </div>
