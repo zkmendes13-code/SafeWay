@@ -66,7 +66,7 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
         { icon: <Download className="w-5 h-5" />, label: "Speed Test", onClick: () => onNavigate('speedtest') },
         { icon: <Share2 className="w-5 h-5" />, label: "Hotspot", onClick: () => onNavigate('hotspot') },
         { icon: <Search className="w-5 h-5" />, label: "Buscador de IP", onClick: () => onNavigate('ipfinder') },
-        { icon: <BriefcaseBusiness className="w-5 h-5" />, label: "Serviços", onClick: () => onNavigate('services') }
+       // { icon: <BriefcaseBusiness className="w-5 h-5" />, label: "Serviços", onClick: () => onNavigate('services') }
       ]
     },
     {
