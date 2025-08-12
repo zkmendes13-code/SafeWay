@@ -11,7 +11,7 @@
   }
 
   body {
-    background: linear-gradient(135deg, #373b47 0%, #2f313e 50%, #f3f4f6 100%);
+    background: linear-gradient(135deg, #2A0A3E 0%, #4B0082 50%, #2A0A3E 100%);
     min-height: 100vh;
     color: #f3f4f6;
   }
@@ -71,11 +71,11 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #373b47;
+    background: #2A0A3E;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1E90FF;
+    background: #4B0082;
     border-radius: 9999px;
   }
 }
@@ -96,7 +96,7 @@
   
   .btn-outline {
     padding: 1.5rem 1.5rem;
-    border: 2px solid #1E90FF;
+    border: 2px solid #4B0082;
     color: #E0E0E0;
     border-radius: 0.5rem;
     font-weight: 500;
@@ -113,7 +113,7 @@
   }
 
   .card {
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.5), rgba(2, 88, 255, 0.5));
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(42, 10, 62, 0.5));
     backdrop-filter: blur(4px);
     border-radius: 0.75rem;
     padding: 1.5rem;
