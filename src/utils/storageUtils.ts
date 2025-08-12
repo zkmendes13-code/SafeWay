@@ -1,5 +1,5 @@
 
-const STORAGE_PREFIX = '@sshproject:';
+const STORAGE_PREFIX = '@pshnet:';
 
 export function getStorageItem<T>(key: string): T | null {
   try {
