@@ -62,7 +62,7 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
     {
       title: "Ferramentas",
       items: [
-        { icon: <Zap className="w-5 h-5" />, label: "Teste Automático", onClick: () => autoConnect.openModal(), highlight: true },
+      // { icon: <Zap className="w-5 h-5" />, label: "Teste Automático", onClick: () => autoConnect.openModal(), highlight: true },
         { icon: <Download className="w-5 h-5" />, label: "Speed Test", onClick: () => onNavigate('speedtest') },
         { icon: <Share2 className="w-5 h-5" />, label: "Hotspot", onClick: () => onNavigate('hotspot') },
         { icon: <Search className="w-5 h-5" />, label: "Buscador de IP", onClick: () => onNavigate('ipfinder') },
